@@ -12,6 +12,9 @@ The Resume Analyzer Tool is a Python application built using Google Cloud's Geme
 - **Text-Based and Image-Based Resume Support:** Supports analysis of both text-based and image-based resumes.
 - **Streamlined Interface:** User-friendly interface built with Streamlit for easy interaction and intuitive experience.
 
+## Original Author
+This project is similar to Krish Naik sir video on ATS (Appkications Tracking System).
+
 ---
 Vridhi Pages @ 2024
 For more information, visit [vridhipages.tech](https://www.vridhipages.tech).
