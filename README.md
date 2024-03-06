@@ -14,4 +14,4 @@ The Resume Analyzer Tool is a Python application built using Google Cloud's Geme
 
 ---
 Vridhi Pages @ 2024
-For more information, visit [vridhipages.tech](https//www.vridhipages.tech).
+For more information, visit [vridhipages.tech](https://www.vridhipages.tech).
