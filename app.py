@@ -35,6 +35,7 @@ on Jd and
 the missing keywords with high accuracy
 resume:{text}
 description:{jd}
+Compare both the files to find meaningful insights and provide the feedback.
 
 I want the response in one single string having the structure
 {{"JD Match":"%","MissingKeywords:[]","Profile Summary":""}}
