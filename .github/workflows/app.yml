@@ -1,4 +1,4 @@
-name: Build and Deploy Streamlit App
+name: Streamlit App Deployment
 
 on:
   push:
@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -24,5 +27,4 @@ jobs:
 
       - name: Run Streamlit app
         run: |
-          export API_KEY=${{ secrets.API_KEY }}
           streamlit run app.py
