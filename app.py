@@ -7,7 +7,7 @@ import json
 
 load_dotenv() ## load all our environment variables
 
-genai.configure(api_key= os.environ.get('API_KEY'))
+genai.configure(api_key= "AIzaSyBAsAdiHYQxkv4kYhO94aoK3xq2qbcB5QQ")
 
 
 def get_gemini_repsonse(input):
@@ -25,19 +25,22 @@ def input_pdf_text(uploaded_file):
 
 #Prompt Template
 
-input_prompt="""
-Hey Act Like a skilled or very experience ATS(Application Tracking System)
-with a deep understanding of tech field,software engineering,data science ,data analyst
-and big data engineer. Your task is to evaluate the resume based on the given job description.
-You must consider the job market is very competitive and you should provide 
-best assistance for improving thr resumes. Assign the percentage Matching based 
-on Jd and
-the missing keywords with high accuracy
-resume:{text}
-description:{jd}
+input_prompt = r"""
+Hey! Act like a skilled or very experienced ATS (Application Tracking System) with a deep understanding of the tech field, software engineering, data science, data analysis, and big data engineering. Your task is to evaluate the resume based on the given job description. You must consider the job market is very competitive and you should provide the best assistance for improving the resumes. Assign the percentage matching based on JD and the missing keywords with high accuracy.
+Assign the percentage Matching based on Jd and the missing keywords with high accuracy
+Strictly use the resume:{text}, description:{jd} content only to give the response and stick to the format provided below.
 
-I want the response in one single string having the structure
-{{"JD Match":"%","MissingKeywords:[]","Profile Summary":""}}
+**JD Match:** {jd_match}%
+**Missing Keywords:** {missing_keywords}
+**Profile Summary:** {profile_summary}
+**Improvement Areas:** {improvement_areas}
+
+
+**Resume Score:** {resume_score}
+**Resume Readability:** {resume_readability}
+**Resume Length:** {resume_length}
+**Resume Format:** {resume_format}
+**Resume Font Score:** {resume_font_score}
 """
 
 ## streamlit app
