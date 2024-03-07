@@ -44,15 +44,15 @@ Strictly use the resume:{text}, description:{jd} content only to give the respon
 """
 
 ## streamlit app
-st.title("Smart ATS")
-st.text("Improve Your Resume ATS")
+st.title("Vridhi Resume Analyser")
+st.text("Analyse your resume and get the best feedback to improve it")
+uploaded_file=st.file_uploader("Upload Your Resume",type="pdf",help="Please upload the file.(only pdf supported)")
 jd=st.text_area("Paste the Job Description")
-uploaded_file=st.file_uploader("Upload Your Resume",type="pdf",help="Please uplaod the pdf")
 
 submit = st.button("Submit")
 
 if submit:
-    if uploaded_file is not None:
-        text=input_pdf_text(uploaded_file)
-        response=get_gemini_repsonse(input_prompt)
+    if uploaded_file is not None and jd is not None:
+        text = input_pdf_text(uploaded_file)
+        response = get_gemini_repsonse(input_prompt)
         st.subheader(response)
